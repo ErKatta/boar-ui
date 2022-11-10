@@ -4,20 +4,29 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { TrainingHomePageComponent } from './training-home-page/training-home-page.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([{ path: '', component: ProductListComponent }]),
+    RouterModule.forRoot([{ path: '', component: TrainingHomePageComponent }]),
     BrowserAnimationsModule,
     MatSliderModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
   ],
-  declarations: [AppComponent, TopBarComponent, ProductListComponent],
+  declarations: [AppComponent, TrainingHomePageComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

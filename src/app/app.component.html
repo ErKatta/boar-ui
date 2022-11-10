@@ -1,8 +1,39 @@
-<app-top-bar></app-top-bar>
-<mat-slider min="1" max="100" step="1" value="50"></mat-slider>
-<div class="container">
-  <router-outlet> </router-outlet>
-</div>
+<mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+    (click)="snav.toggle()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>BoAR</span>
+</mat-toolbar>
+
+<mat-sidenav-container
+  class="example-sidenav-container"
+  [style.marginTop.px]="mobileQuery.matches ? 56 : 0"
+>
+  <mat-sidenav
+    #snav
+    [mode]="mobileQuery.matches ? 'over' : 'side'"
+    [fixedInViewport]="mobileQuery.matches"
+    fixedTopGap="56"
+  >
+    <mat-nav-list>
+      <a mat-list-item routerLink="." *ngFor="let nav of fillerNav"
+        ><mat-icon>{{ nav.icon }}</mat-icon
+        >{{ nav.name }}</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="container">
+      <router-outlet> </router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
