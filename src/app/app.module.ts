@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
 import { TrainingHomePageComponent } from './training-home-page/training-home-page.component';
 
 @NgModule({
@@ -25,6 +26,7 @@ import { TrainingHomePageComponent } from './training-home-page/training-home-pa
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
+    MatTableModule,
   ],
   declarations: [AppComponent, TrainingHomePageComponent],
   bootstrap: [AppComponent],

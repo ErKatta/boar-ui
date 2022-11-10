@@ -10,7 +10,7 @@ export class AppComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
 
   fillerNav = [
-    { name: 'Allenamenti', icon: 'settings_accessibility' },
+    { name: 'Allenamenti', icon: 'sports_handball' },
     { name: 'Gare', icon: 'sports_rugby' },
     { name: 'Atleti', icon: 'person' },
     { name: 'Statistiche', icon: 'query_stats' },
