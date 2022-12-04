@@ -10,11 +10,15 @@ export class AppComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
 
   fillerNav = [
-    { name: 'Allenamenti', icon: 'sports_handball' },
-    { name: 'Gare', icon: 'sports_rugby' },
-    { name: 'Atleti', icon: 'person' },
-    { name: 'Statistiche', icon: 'query_stats' },
-    { name: 'Report', icon: 'summarize' },
+    {
+      name: 'Allenamenti',
+      icon: 'sports_handball',
+      route: 'training-home-page',
+    },
+    { name: 'Gare', icon: 'sports_rugby', route: 'training-home-page' },
+    { name: 'Atleti', icon: 'person', route: 'athletes-home-page' },
+    { name: 'Statistiche', icon: 'query_stats', route: 'training-home-page' },
+    { name: 'Report', icon: 'summarize', route: 'training-home-page' },
   ];
 
   private _mobileQueryListener: () => void;

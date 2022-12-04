@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -12,13 +12,22 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
 import { TrainingHomePageComponent } from './training-home-page/training-home-page.component';
+import { AthletesHomePageComponent } from './athletes-home-page/athletes-home-page.component';
+import { AthleteProfileCardComponent } from './athlete-profile-card/athlete-profile-card.component';
+
+const routes: Routes = [
+  { path: '', component: TrainingHomePageComponent },
+  { path: 'training-home-page', component: TrainingHomePageComponent },
+  { path: 'athletes-home-page', component: AthletesHomePageComponent },
+];
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([{ path: '', component: TrainingHomePageComponent }]),
+    RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     MatSliderModule,
     MatToolbarModule,
@@ -27,8 +36,14 @@ import { TrainingHomePageComponent } from './training-home-page/training-home-pa
     MatSidenavModule,
     MatListModule,
     MatTableModule,
+    MatCardModule,
   ],
-  declarations: [AppComponent, TrainingHomePageComponent],
+  declarations: [
+    AppComponent,
+    TrainingHomePageComponent,
+    AthletesHomePageComponent,
+    AthleteProfileCardComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
