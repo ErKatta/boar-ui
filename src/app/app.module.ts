@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -16,6 +17,7 @@ import { MatCardModule } from '@angular/material/card';
 import { TrainingHomePageComponent } from './training-home-page/training-home-page.component';
 import { AthletesHomePageComponent } from './athletes-home-page/athletes-home-page.component';
 import { AthleteProfileCardComponent } from './athlete-profile-card/athlete-profile-card.component';
+import { TrainingsTableComponent } from './trainings-table/trainings-table.component';
 
 const routes: Routes = [
   { path: '', component: TrainingHomePageComponent },
@@ -32,6 +34,7 @@ const routes: Routes = [
     MatSliderModule,
     MatToolbarModule,
     MatIconModule,
+    MatInputModule,
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
@@ -43,6 +46,7 @@ const routes: Routes = [
     TrainingHomePageComponent,
     AthletesHomePageComponent,
     AthleteProfileCardComponent,
+    TrainingsTableComponent,
   ],
   bootstrap: [AppComponent],
 })
